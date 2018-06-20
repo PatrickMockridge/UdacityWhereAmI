@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/patrick/robotics/UdacityWhereAmI/catkin_ws/install/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/patrick/robotics/UdacityWhereAmI/catkin_ws/install/lib;/home/patrick/robotics/UdacityWhereAmI/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -152,7 +152,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(udacity_bot_EXPORTED_TARGETS "")
+set(udacity_bot_EXPORTED_TARGETS "udacity_bot_generate_messages_cpp;udacity_bot_generate_messages_eus;udacity_bot_generate_messages_lisp;udacity_bot_generate_messages_nodejs;udacity_bot_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${udacity_bot_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -189,7 +189,7 @@ foreach(depend ${depends})
   list(APPEND udacity_bot_EXPORTED_TARGETS ${${udacity_bot_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "udacity_bot-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${udacity_bot_DIR}/${extra})

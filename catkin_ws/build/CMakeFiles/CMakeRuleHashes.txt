@@ -1,2 +1,4 @@
 # Hashes of file build rules.
+3c2ad0918a79fa06de2bb7304ce1628b /home/patrick/robotics/UdacityWhereAmI/catkin_ws/devel/share/roseus/ros/udacity_bot/manifest.l
 f1d9a6a35d05abf033c7ffabb9cc8c51 CMakeFiles/clean_test_results
+65562bad49a54b8e855266fce65f87d3 udacity_bot/CMakeFiles/udacity_bot_generate_messages_eus
