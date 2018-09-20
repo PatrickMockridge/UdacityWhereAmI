@@ -1,7 +1,7 @@
 map_type: costmap
 
-obstacle_range: 0.95
-raytrace_range: 0.8
+obstacle_range: 1.2
+raytrace_range: 1
 
 transform_tolerance: 0.20
 
